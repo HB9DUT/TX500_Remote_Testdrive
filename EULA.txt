@@ -1,0 +1,69 @@
+TX500 REMOTE - END USER LICENCE AGREEMENT (TEST VERSION)
+
+Copyright (C) 2026 HB9DUT. All rights reserved.
+
+By installing or using this software you accept this agreement. If you do not accept it, do not
+install or use the software.
+
+1. Who may use it
+
+   The software is free of charge. It may be used only by a licensed radio amateur (a person holding
+   a valid amateur radio licence), on his or her own devices, for non-commercial amateur radio
+   purposes.
+
+2. What is not allowed
+
+   a) Commercial use of any kind, including use in a business, in a paid service or as part of a
+      product.
+   b) Selling, renting, sub-licensing or otherwise passing on the software for money.
+   c) Including the software in software collections, bundles, download portals, mirrors, app
+      stores or package repositories, or any other redistribution, without the explicit written
+      consent of the author. Please point others to the official download page instead.
+   d) Modifying the software, reverse engineering, decompiling or disassembling it, except where
+      the law explicitly allows this despite this clause.
+   e) Removing or changing copyright notices.
+
+3. The author
+
+   The author (HB9DUT) keeps all rights and may use and license the software commercially himself.
+   Nothing in this agreement transfers ownership of the software to you. The source code is not
+   part of this package.
+
+4. Test version
+
+   This is a BETA / TEST VERSION. It controls a transmitter. Functions may be missing, wrong or
+   unsafe, and several of them have not yet been confirmed on real radios (see the readme). Test
+   with a dummy load and reduced power first. The software is not signed by an app store; Android
+   asks for your permission to install it from outside a store.
+
+5. Not affiliated
+
+   The software is an independent work. It is not made, endorsed or supported by Lab599 or any
+   other manufacturer. "Lab599", "TX-500", "TX-500MP", "TX-500 Discovery" and "LiNK500MP" are names
+   of their respective owners, used only to describe compatibility.
+
+6. Third-party software
+
+   The software contains Flutter and further open source components (among them the LCD font
+   VT323 under the SIL Open Font License 1.1 and several packages under BSD or MIT licences). For
+   those parts, nothing in this agreement limits the rights their own licences give you.
+
+7. "As is", no warranty, no liability
+
+   The software is provided "as is", without warranty of any kind, express or implied. The author
+   excludes all liability for any damage arising from the use of the software or from the inability
+   to use it, including damage to radio equipment, antennas, other hardware, software, data, and
+   consequential damage. You use the software entirely at your own risk. You are responsible for
+   operating your station within the rules of your licence.
+
+   If a court holds a part of this exclusion invalid, the rest stays in force, and the exclusion
+   applies to the fullest extent the law allows.
+
+8. Ending the agreement
+
+   The agreement ends automatically if you break it. Then you must stop using the software and
+   uninstall it.
+
+9. Law
+
+   Swiss law applies, to the extent permitted by the law of your country.
