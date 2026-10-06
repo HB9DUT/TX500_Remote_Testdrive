@@ -64,7 +64,7 @@ The radio's clock is set from the phone once per connection.
   | VOX, MON, NR, NB, CMR, NF | on / off | settings (gain, delay, level, type) |
   | AGC | default time constant of the mode (CW 5, others 3) | time constant 1 to 10 (greyed in DIG: the radio sets it) |
   | FIL | next filter | filter choice |
-  | MIC / DIG / KEY | switch to the setting of the mode | mic level, DIG level, keyer speed (in CW) |
+  | MIC / DIG / KEY | opens the window of the mode: mic level, DIG level (DIG), keyer speed (CW) | same |
   | PRE / ATT | PRE on / off | ATT on (PRE and ATT exclude each other) |
   | RF | 100 | RF gain |
   | SQL | squelch off / last value | squelch level 0 to 100 (0 = open) |
@@ -98,9 +98,8 @@ This app controls a transmitter. Please read this before the first test.
 
 ## What has not been tested yet (please help)
 
-Confirmed on real radios so far: connecting over Bluetooth and USB, polling, tuning, frequency and mode,
-PRE / ATT, AGC, FIL, SQL, AF, MIC / DIG / KEY level, PWR, TUNE on the TX-500MP; VFO A / B and band keys on the
-Discovery.
+Confirmed on real radios so far: connecting over Bluetooth and USB (TX-500MP and Discovery), polling, tuning,
+the keys PRE / ATT, AGC, SQL and the BAND keys of the Discovery, and TUNE on the TX-500MP.
 
 **Not yet confirmed**, so please try them and report what you see:
 
@@ -120,7 +119,7 @@ Discovery.
 - Report problems in the [Issues](../../issues) with:
   - radio model, link (Bluetooth or USB), phone model and Android version, app version (long press on the logo)
   - what you did and what you expected
-  - the **CAT log** (long press on the display, then copy the lines; or take a screenshot)
+  - the **CAT log** (long press on the display, then take a screenshot of the window)
 
 ## Licence
 
