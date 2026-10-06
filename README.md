@@ -2,8 +2,8 @@
 
 <img src="icon.png" width="96" align="right" alt="">
 
-An Android remote control for the **Lab599 TX-500MP** and the **TX-500 Discovery**. It talks to the radio over
-the Lab599 CAT protocol, in the style of the radios' own blue LCD, with a layout for each model.
+A remote control for the **Lab599 TX-500MP** and the **TX-500 Discovery**, for **Android** and **Windows**. It talks
+to the radio over the Lab599 CAT protocol, in the style of the radios' own blue LCD, with a layout for each model.
 
 > **This is a beta (0.9.0).** It controls a transmitter. Read [Safety](#safety) before the first test, and
 > [What has not been tested yet](#what-has-not-been-tested-yet-please-help) to see where your help is wanted.
@@ -20,20 +20,29 @@ and the downloads only; the source code is private.
 
 ## Download
 
-Get **`TX500Remote-0.9.0-beta.apk`** from the [Releases](../../releases) page. The SHA-256 checksum is in the
-release notes; compare it after the download if you like.
+Get these files from the [Releases](../../releases) page. The SHA-256 checksums are in the release notes;
+compare them after the download if you like.
+
+| Platform | File |
+|---|---|
+| Android | `TX500Remote-0.9.0-beta.apk` |
+| Windows 10 / 11 (64 bit) | `TX500Remote-Setup-0.9.0-beta.exe` |
 
 ## Requirements
 
-- Android 7 or newer, a 64-bit ARM phone (practically every phone of the last years). Tested on a Pixel 9 Pro.
+- **Android:** Android 7 or newer, a 64-bit ARM phone (practically every phone of the last years). Tested on a
+  Pixel 9 Pro.
+- **Windows:** Windows 10 (version 2004) or Windows 11, 64 bit. No administrator rights needed.
 - A **TX-500MP** or a **TX-500 Discovery** and one of these connections:
   - **Bluetooth:** TX-500MP with the DIY599 **LiNK500MP-MK2** in **mode 3** (Bluetooth to radio CAT).
-  - **USB:** the radio's own USB cable (TX-500MP and Discovery), or the LiNK500MP-MK2 over USB-C. Your phone
+  - **USB:** the radio's own USB cable (TX-500MP and Discovery), or the LiNK500MP-MK2 over USB-C. A phone
     needs USB host (OTG) support and a suitable cable.
 - On the radio, menu **36 "CAT Protocol"** set to **LAB599** (not TS2000).
 - A valid amateur radio licence: see the [licence](#licence).
 
 ## Install
+
+### Android
 
 1. Download the APK on the phone (or copy it there).
 2. Open it. Android asks to allow installing apps from this source (browser or file manager): allow it.
@@ -43,16 +52,39 @@ release notes; compare it after the download if you like.
 An update installs over the old version without losing settings. To remove the app: *Settings > Apps >
 TX500 Remote > Uninstall*. The app has **no internet permission** and collects nothing.
 
+### Windows
+
+1. Download `TX500Remote-Setup-0.9.0-beta.exe` and run it.
+2. The installer is **not code-signed**, so Windows SmartScreen may say "Windows protected your PC": click
+   *More info*, then *Run anyway*.
+3. Read and accept the licence agreement. The program is installed for your own user (no administrator
+   rights); the installer also offers an installation for all users, a Start menu entry and, if you like, a
+   desktop icon.
+4. Start **TX500 Remote**. To remove it: *Settings > Apps > Installed apps > TX500 Remote > Uninstall*.
+
+An update installs over the old version. The program has no network access and collects nothing.
+
 ## Connect
 
-Long press on the logo ("TX500 REMOTE") to choose the link: **USB (automatic)** or **Bluetooth (automatic)**.
-The same dialog shows the installed version at the bottom.
+Long press on the logo ("TX500 REMOTE") to choose the link; on a PC, press and hold the left mouse button.
+On Android the choices are **USB (automatic)** and **Bluetooth (automatic)**; on Windows they are
+**Bluetooth (automatic)** and **the COM ports** of the PC, which you pick by hand. The same dialog shows the
+installed version at the bottom.
 
 - **Bluetooth:** pair the phone with **`LiNK500MP`** in the Android Bluetooth settings first (the MK2 must be
   in mode 3). The app then finds it by name. Android asks for the *Nearby devices* permission the first time.
 - **USB:** plug the cable in, switch the link to USB and tap the connect switch. Android asks once for
   permission to use the USB device. When you plug the radio's cable in, Android also offers TX500 Remote in
   its list of apps.
+
+- **Windows, USB:** connect the radio (or the LiNK500MP-MK2 over USB-C), look up its COM port in the Device
+  Manager (*Ports (COM & LPT)*; the MK2 shows several ports, the CAT one answers to the radio, the other ones are
+  GPS and TNC), and choose that port in the dialog. The choice is remembered. Install the driver of the USB chip
+  first if Windows does not offer a COM port (Silicon Labs CP210x for the MK2 and the TX-500MP, FTDI for the
+  Discovery).
+- **Windows, Bluetooth:** pair the PC with **`LiNK500MP`** in the Windows Bluetooth settings (the MK2 in mode 3).
+  Windows then creates two "Standard Serial over Bluetooth" ports; "Bluetooth (automatic)" tries them and keeps
+  the one that answers. If it does not find the right one, choose the first of the two COM ports by hand.
 
 Tap the **connect switch** at the top left. Next to it you see the link and the radio model
 (**TX-500MP** or **TX-500 Discovery**); the layout follows the model by itself. The app accepts only
@@ -61,7 +93,8 @@ The radio's clock is set from the phone once per connection.
 
 ## Using it
 
-- **Frequency:** turn the **rotary knob**; each click changes the frequency by the tuning step. **STEP + / -**
+- **Frequency:** turn the **rotary knob** (on a PC also with the **mouse wheel** over the knob); each click
+  changes the frequency by the tuning step. **STEP + / -**
   changes the step (10 Hz to 1 MHz), an arrow under a digit shows it.
 - **Keys:** a **short press** switches or acts, a **long press** opens a settings window with sliders (keys
   with such a window have a small dot).
@@ -115,16 +148,21 @@ CMR and MON, the mic and DIG levels, and TUNE on the TX-500MP.
 - Keyer speed and CTCSS tone
 - Discovery: **SPLIT**, VFO copy, and the VFO B mode display
 - The look of the idle display and of both layouts on other phones and screen sizes
+- **Windows:** USB (by COM port) and Bluetooth (with the LiNK500MP-MK2) have worked; other radios, other
+  USB adapters and other Bluetooth setups are not tried yet. The program sets DTR and RTS off right after the port opens; a short blip
+  while it opens can not be ruled out for every driver, so test with a dummy load first
 
 ## If something does not work
 
 - **Cannot connect over Bluetooth:** is the MK2 in mode 3? Is `LiNK500MP` paired? Is menu 36 on LAB599?
   Is the radio on?
 - **Cannot connect over USB:** try another cable (charge-only cables do not work), allow the USB permission
-  dialog, and check that the radio is on.
+  dialog (Android), and check that the radio is on. On Windows check the COM port in the Device Manager and that
+  no other program (a terminal, the radio's own software) holds it.
 - **"Radio does not answer" / "Connection lost":** the link broke; reconnect.
 - Report problems in the [Issues](../../issues) with:
-  - radio model, link (Bluetooth or USB), phone model and Android version, app version (long press on the logo)
+  - radio model, link (Bluetooth or USB), phone model and Android version or Windows version, app version
+    (long press on the logo)
   - what you did and what you expected
   - the **CAT log** (long press on the display, then take a screenshot of the window)
 
