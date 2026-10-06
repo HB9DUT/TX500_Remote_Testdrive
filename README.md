@@ -135,6 +135,7 @@ This app controls a transmitter. Please read this before the first test.
 - The app sends `RX;` when it connects, disconnects, goes to the background or loses the link. If the link
   breaks while the radio transmits, the app can no longer reach it: keep the radio's own controls in reach.
 - You are responsible for operating your station within the rules of your licence.
+- Always remember: The DUT in HB9DUT stands for "Device Unter Test" 😁
 
 ## What has not been tested yet (please help)
 
