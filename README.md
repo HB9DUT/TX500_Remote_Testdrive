@@ -106,13 +106,13 @@ This app controls a transmitter. Please read this before the first test.
 ## What has not been tested yet (please help)
 
 Confirmed on real radios so far: connecting over Bluetooth and USB (TX-500MP and Discovery), polling, tuning,
-the keys PRE / ATT, AGC, SQL and the BAND keys of the Discovery, and TUNE on the TX-500MP.
+the keys PRE / ATT, AGC, SQL, DIF and the BAND keys of the Discovery, the settings windows of VOX, NR, NB,
+CMR and MON, the mic and DIG levels, and TUNE on the TX-500MP.
 
 **Not yet confirmed**, so please try them and report what you see:
 
-- The settings windows of VOX, NR, NB, CMR and MON (do the values arrive and read back correctly?)
 - The **SWR** display while transmitting: the conversion from the radio's 0 to 30 dots to a number is a guess
-- Keyer speed, CTCSS tone, DIF switch, mic and DIG level formats
+- Keyer speed and CTCSS tone
 - Discovery: **SPLIT**, VFO copy, and the VFO B mode display
 - The look of the idle display and of both layouts on other phones and screen sizes
 
