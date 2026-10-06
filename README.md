@@ -148,8 +148,8 @@ CMR and MON, the mic and DIG levels, and TUNE on the TX-500MP.
 - Keyer speed and CTCSS tone
 - Discovery: **SPLIT**, VFO copy, and the VFO B mode display
 - The look of the idle display and of both layouts on other phones and screen sizes
-- **Windows:** USB (by COM port) and Bluetooth (with the LiNK500MP-MK2) have worked; other radios, other
-  USB adapters and other Bluetooth setups are not tried yet. The program sets DTR and RTS off right after the port opens; a short blip
+- **Windows:** USB (by COM port) and Bluetooth (with the LiNK500MP-MK2) have worked with the TX-500MP; the
+  Discovery is expected to work like on Android but is not tried yet, nor are other USB adapters and Bluetooth setups. The program sets DTR and RTS off right after the port opens; a short blip
   while it opens can not be ruled out for every driver, so test with a dummy load first
 
 ## If something does not work
