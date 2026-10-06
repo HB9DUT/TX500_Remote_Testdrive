@@ -11,6 +11,13 @@ the Lab599 CAT protocol, in the style of the radios' own blue LCD, with a layout
 By HB9DUT. Not affiliated with, endorsed by, or supported by Lab599. This repository holds the documentation
 and the downloads only; the source code is private.
 
+<p align="center">
+  <img src="screenshots/main.png" width="250" alt="TX-500MP connected over Bluetooth, receiving on 7.195.400 LSB">
+  <img src="screenshots/settings.png" width="250" alt="Settings window of the VOX key">
+  <img src="screenshots/mode.png" width="250" alt="Mode window with direct choice of the mode">
+</p>
+<p align="center"><sub>TX-500MP over Bluetooth: the display, a settings window (long press on VOX) and the mode choice (long press on MODE).</sub></p>
+
 ## Download
 
 Get **`TX500Remote-0.9.0-beta.apk`** from the [Releases](../../releases) page. The SHA-256 checksum is in the
