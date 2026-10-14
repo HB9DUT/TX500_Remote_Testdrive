@@ -66,22 +66,23 @@ An update installs over the old version. The program has no network access and c
 
 ## Connect
 
-Long press on the logo ("TX500 REMOTE") to choose the link; on a PC, press and hold the left mouse button.
+**To choose the link, long press on the logo ("TX500 REMOTE") at the top; on a PC, press and hold the left mouse
+button on it.** This opens the link menu.
 On Android the choices are **USB (automatic)** and **Bluetooth (automatic)**; on Windows they are
 **Bluetooth (automatic)** and **the COM ports** of the PC, which you pick by hand. The same dialog shows the
 installed version at the bottom.
 
 - **Bluetooth:** pair the phone with **`LiNK500MP`** in the Android Bluetooth settings first (the MK2 must be
   in mode 3). The app then finds it by name. Android asks for the *Nearby devices* permission the first time.
-- **USB:** plug the cable in, switch the link to USB and tap the connect switch. Android asks once for
+- **USB:** plug the cable in, long press on the logo and choose **USB (automatic)**, then tap the connect switch. Android asks once for
   permission to use the USB device. When you plug the radio's cable in, Android also offers TX500 Remote in
   its list of apps.
 
 - **Windows, USB:** connect the radio (or the LiNK500MP-MK2 over USB-C), look up its COM port in the Device
   Manager (*Ports (COM & LPT)*; the MK2 shows several ports, the CAT one answers to the radio, the other ones are
-  GPS and TNC), and choose that port in the dialog. The choice is remembered. Install the driver of the USB chip
-  first if Windows does not offer a COM port (Silicon Labs CP210x for the MK2 and the TX-500MP, FTDI for the
-  Discovery).
+  GPS and TNC), and choose that port in the link menu (press and hold the left mouse button on the logo). The choice is remembered. Install the driver of the USB chip
+  first if Windows does not offer a COM port (FTDI for the radio's own cable on the TX-500MP and the
+  Discovery, Silicon Labs CP210x for the LiNK500MP-MK2).
 - **Windows, Bluetooth:** pair the PC with **`LiNK500MP`** in the Windows Bluetooth settings (the MK2 in mode 3).
   Windows then creates two "Standard Serial over Bluetooth" ports; "Bluetooth (automatic)" tries them and keeps
   the one that answers. If it does not find the right one, choose the first of the two COM ports by hand.
