@@ -34,7 +34,8 @@ compare them after the download if you like.
   Pixel 9 Pro.
 - **Windows:** Windows 10 (version 2004) or Windows 11, 64 bit. No administrator rights needed.
 - A **TX-500MP** or a **TX-500 Discovery** and one of these connections:
-  - **Bluetooth:** TX-500MP with the DIY599 **LiNK500MP-MK2** in **mode 3** (Bluetooth to radio CAT).
+  - **Bluetooth:** TX-500MP with a DIY599 **LiNK500MP-MK2** or **LiNK500MP-MK3** in
+    **mode 3** (Bluetooth to radio CAT).
   - **USB:** the radio's own USB cable (TX-500MP and Discovery), or the LiNK500MP-MK2 over USB-C. A phone
     needs USB host (OTG) support and a suitable cable.
 - On the radio, menu **36 "CAT Protocol"** set to **LAB599** (not TS2000).
@@ -72,8 +73,8 @@ On Android the choices are **USB (automatic)** and **Bluetooth (automatic)**; on
 **Bluetooth (automatic)** and **the COM ports** of the PC, which you pick by hand. The same dialog shows the
 installed version at the bottom.
 
-- **Bluetooth:** pair the phone with **`LiNK500MP`** in the Android Bluetooth settings first (the MK2 must be
-  in mode 3). The app then finds it by name. Android asks for the *Nearby devices* permission the first time.
+- **Bluetooth:** pair the phone with **`LiNK500MP`** in the Android Bluetooth settings first (the LiNK500MP
+  must be in mode 3). The app then finds it by name. Android asks for the *Nearby devices* permission the first time.
 - **USB:** plug the cable in, long press on the logo and choose **USB (automatic)**, then tap the connect switch. Android asks once for
   permission to use the USB device. When you plug the radio's cable in, Android also offers TX500 Remote in
   its list of apps.
@@ -83,7 +84,7 @@ installed version at the bottom.
   GPS and TNC), and choose that port in the link menu (press and hold the left mouse button on the logo). The choice is remembered. Install the driver of the USB chip
   first if Windows does not offer a COM port (FTDI for the radio's own cable on the TX-500MP and the
   Discovery, Silicon Labs CP210x for the LiNK500MP-MK2).
-- **Windows, Bluetooth:** pair the PC with **`LiNK500MP`** in the Windows Bluetooth settings (the MK2 in mode 3).
+- **Windows, Bluetooth:** pair the PC with **`LiNK500MP`** in the Windows Bluetooth settings (the LiNK500MP in mode 3).
   Windows then creates two "Standard Serial over Bluetooth" ports; "Bluetooth (automatic)" tries them and keeps
   the one that answers. If it does not find the right one, choose the first of the two COM ports by hand.
 
@@ -148,15 +149,16 @@ CMR and MON, the mic and DIG levels, and TUNE on the TX-500MP.
 
 - The **SWR** display while transmitting: the conversion from the radio's 0 to 30 dots to a number is a guess
 - Keyer speed and CTCSS tone
+- Bluetooth with the original **LiNK500MP** (before the MK2): expected to work like the MK2 and MK3
 - Discovery: **SPLIT**, VFO copy, and the VFO B mode display
 - The look of the idle display and of both layouts on other phones and screen sizes
-- **Windows:** USB (by COM port) and Bluetooth (with the LiNK500MP-MK2) have worked with the TX-500MP; the
+- **Windows:** USB (by COM port) and Bluetooth (with the LiNK500MP) have worked with the TX-500MP; the
   Discovery is expected to work like on Android but is not tried yet, nor are other USB adapters and Bluetooth setups. The program sets DTR and RTS off right after the port opens; a short blip
   while it opens can not be ruled out for every driver, so test with a dummy load first
 
 ## If something does not work
 
-- **Cannot connect over Bluetooth:** is the MK2 in mode 3? Is `LiNK500MP` paired? Is menu 36 on LAB599?
+- **Cannot connect over Bluetooth:** is the LiNK500MP in mode 3? Is `LiNK500MP` paired? Is menu 36 on LAB599?
   Is the radio on?
 - **Cannot connect over USB:** try another cable (charge-only cables do not work), allow the USB permission
   dialog (Android), and check that the radio is on. On Windows check the COM port in the Device Manager and that
