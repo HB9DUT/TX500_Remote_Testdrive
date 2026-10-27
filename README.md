@@ -36,8 +36,8 @@ compare them after the download if you like.
 - A **TX-500MP** or a **TX-500 Discovery** and one of these connections:
   - **Bluetooth:** TX-500MP with a DIY599 **LiNK500MP-MK2** or **LiNK500MP-MK3** in
     **mode 3** (Bluetooth to radio CAT).
-  - **Other Bluetooth serial (SPP) adapters** (Android only, untested): for example the third-party
-    "BT-550MP" adapter, which pairs as "Bluetooth Audio". Chosen by hand, see [Connect](#connect).
+  - **Other Bluetooth serial (SPP) adapters** (Android only): can be chosen by hand, see [Connect](#connect).
+    This is provided **as is and not supported**: only the LiNK500MP is supported.
   - **USB:** the radio's own USB cable (TX-500MP and Discovery), or the LiNK500MP-MK2 over USB-C. A phone
     needs USB host (OTG) support and a suitable cable.
 - On the radio, menu **36 "CAT Protocol"** set to **LAB599** (not TS2000).
@@ -80,7 +80,8 @@ installed version at the bottom.
 - **Other Bluetooth adapters (Android):** pair the adapter in the Android Bluetooth settings, then choose
   **Bluetooth (choose device…)** and pick it from the list of paired devices (name and address are shown). The
   choice is remembered. The app only accepts the device if the radio answers its identity request; otherwise the
-  connection fails with a message.
+  connection fails with a message. **As is, not supported:** only the LiNK500MP is supported. Support for
+  another adapter is only possible if the hardware is made available to me.
 - **USB:** plug the cable in, long press on the logo and choose **USB (automatic)**, then tap the connect switch. Android asks once for
   permission to use the USB device. When you plug the radio's cable in, Android also offers TX500 Remote in
   its list of apps.
@@ -156,8 +157,6 @@ CMR and MON, the mic and DIG levels, and TUNE on the TX-500MP.
 - The **SWR** display while transmitting: the conversion from the radio's 0 to 30 dots to a number is a guess
 - Keyer speed and CTCSS tone
 - Bluetooth with the original **LiNK500MP** (before the MK2): expected to work like the MK2 and MK3
-- **Other Bluetooth adapters** chosen by hand (new in 0.9.1), e.g. the "BT-550MP" ("Bluetooth Audio"):
-  does it connect, and does tuning (frequency change) reach the radio?
 - Discovery: **SPLIT**, VFO copy, and the VFO B mode display
 - The look of the idle display and of both layouts on other phones and screen sizes
 - **Windows:** USB (by COM port) and Bluetooth (with the LiNK500MP) have worked with the TX-500MP; the
