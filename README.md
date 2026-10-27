@@ -5,7 +5,7 @@
 A remote control for the **Lab599 TX-500MP** and the **TX-500 Discovery**, for **Android** and **Windows**. It talks
 to the radio over the Lab599 CAT protocol, in the style of the radios' own blue LCD, with a layout for each model.
 
-> **This is a beta (0.9.0).** It controls a transmitter. Read [Safety](#safety) before the first test, and
+> **This is a beta (0.9.1).** It controls a transmitter. Read [Safety](#safety) before the first test, and
 > [What has not been tested yet](#what-has-not-been-tested-yet-please-help) to see where your help is wanted.
 
 By HB9DUT. Not affiliated with, endorsed by, or supported by Lab599. This repository holds the documentation
@@ -25,8 +25,8 @@ compare them after the download if you like.
 
 | Platform | File |
 |---|---|
-| Android | `TX500Remote-0.9.0-beta.apk` |
-| Windows 10 / 11 (64 bit) | `TX500Remote-Setup-0.9.0-beta.exe` |
+| Android | `TX500Remote-0.9.1-beta.apk` |
+| Windows 10 / 11 (64 bit) | `TX500Remote-Setup-0.9.1-beta.exe` |
 
 ## Requirements
 
@@ -36,6 +36,8 @@ compare them after the download if you like.
 - A **TX-500MP** or a **TX-500 Discovery** and one of these connections:
   - **Bluetooth:** TX-500MP with a DIY599 **LiNK500MP-MK2** or **LiNK500MP-MK3** in
     **mode 3** (Bluetooth to radio CAT).
+  - **Other Bluetooth serial (SPP) adapters** (Android only, untested): for example the third-party
+    "BT-550MP" adapter, which pairs as "Bluetooth Audio". Chosen by hand, see [Connect](#connect).
   - **USB:** the radio's own USB cable (TX-500MP and Discovery), or the LiNK500MP-MK2 over USB-C. A phone
     needs USB host (OTG) support and a suitable cable.
 - On the radio, menu **36 "CAT Protocol"** set to **LAB599** (not TS2000).
@@ -55,7 +57,7 @@ TX500 Remote > Uninstall*. The app has **no internet permission** and collects n
 
 ### Windows
 
-1. Download `TX500Remote-Setup-0.9.0-beta.exe` and run it.
+1. Download `TX500Remote-Setup-0.9.1-beta.exe` and run it.
 2. The installer is **not code-signed**, so Windows SmartScreen may say "Windows protected your PC": click
    *More info*, then *Run anyway*.
 3. Read and accept the licence agreement. The program is installed for your own user (no administrator
@@ -69,12 +71,16 @@ An update installs over the old version. The program has no network access and c
 
 **To choose the link, long press on the logo ("TX500 REMOTE") at the top; on a PC, press and hold the left mouse
 button on it.** This opens the link menu.
-On Android the choices are **USB (automatic)** and **Bluetooth (automatic)**; on Windows they are
+On Android the choices are **USB (automatic)**, **Bluetooth (automatic)** and **Bluetooth (choose device…)**; on Windows they are
 **Bluetooth (automatic)** and **the COM ports** of the PC, which you pick by hand. The same dialog shows the
 installed version at the bottom.
 
 - **Bluetooth:** pair the phone with **`LiNK500MP`** in the Android Bluetooth settings first (the LiNK500MP
   must be in mode 3). The app then finds it by name. Android asks for the *Nearby devices* permission the first time.
+- **Other Bluetooth adapters (Android):** pair the adapter in the Android Bluetooth settings, then choose
+  **Bluetooth (choose device…)** and pick it from the list of paired devices (name and address are shown). The
+  choice is remembered. The app only accepts the device if the radio answers its identity request; otherwise the
+  connection fails with a message.
 - **USB:** plug the cable in, long press on the logo and choose **USB (automatic)**, then tap the connect switch. Android asks once for
   permission to use the USB device. When you plug the radio's cable in, Android also offers TX500 Remote in
   its list of apps.
@@ -150,6 +156,8 @@ CMR and MON, the mic and DIG levels, and TUNE on the TX-500MP.
 - The **SWR** display while transmitting: the conversion from the radio's 0 to 30 dots to a number is a guess
 - Keyer speed and CTCSS tone
 - Bluetooth with the original **LiNK500MP** (before the MK2): expected to work like the MK2 and MK3
+- **Other Bluetooth adapters** chosen by hand (new in 0.9.1), e.g. the "BT-550MP" ("Bluetooth Audio"):
+  does it connect, and does tuning (frequency change) reach the radio?
 - Discovery: **SPLIT**, VFO copy, and the VFO B mode display
 - The look of the idle display and of both layouts on other phones and screen sizes
 - **Windows:** USB (by COM port) and Bluetooth (with the LiNK500MP) have worked with the TX-500MP; the
